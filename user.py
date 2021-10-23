@@ -10,8 +10,14 @@ class User:
         self.password = password
 
     def save_user(self):
-        """
-        Function to save a created instance
-        """
+        '''
+        Method to save a created instance
+        '''
         User.user_list.append(self)
+
+    def delete_user(self):
+        '''
+        A method to delete a saved user
+        '''
+        User.user_list.remove(self)
         
