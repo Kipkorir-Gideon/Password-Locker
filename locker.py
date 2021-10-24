@@ -127,3 +127,17 @@ def main():
 
                     elif short_code == 'cp':
                         print(' ')
+                        chosen_account = input('Enter account to copy password from: ')
+                        copy_credentials(chosen_account)
+                        print(' ')
+
+                    elif short_code == 'ex':
+                        print(' ')
+                        print(f'Goodbye {user_name}')
+                        break
+
+                    else:
+                        print('Wrong option. Try again.')
+
+        elif short_code == 'ex':
+            break
