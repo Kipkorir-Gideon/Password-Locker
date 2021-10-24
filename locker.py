@@ -138,6 +138,16 @@ def main():
 
                     else:
                         print('Wrong option. Try again.')
+            else:
+                print('Wrong details. Try again or create account.')
 
         elif short_code == 'ex':
             break
+
+        else:
+            print(' ')
+            print('Wrong option. Try again.')
+
+
+if __name__ == '__main__':
+    main()
