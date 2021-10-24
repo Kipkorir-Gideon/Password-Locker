@@ -111,3 +111,19 @@ def main():
                         print(' ')
                         print(f'Credentials created; \n Account name: {accout_name} \n Password: {password}')
                         print(' ')
+
+                    elif short_code == 'dc':
+                        print(' ')
+                        if display_credentials(user_name):
+                            print('List of your credentials.')
+                            print(' ')
+                            for credentials in display_credentials(user_name):
+                                print(f'Account name: {credentials.accout_name} \n Password: {credentials.password}')
+                            print(' ')
+                        else:
+                            print(' ')
+                            print('No credentials yet.')
+                            print(' ')
+
+                    elif short_code == 'cp':
+                        print(' ')
