@@ -1,3 +1,8 @@
+import string
+import random
+
+from user import User
+
 class Credentials:
     '''
     A class for creating user credentials
@@ -20,4 +25,22 @@ class Credentials:
         A method to remove saved credential
         '''
         Credentials.credentials_list.remove(self)
+
+    def generate_password(size=10, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+        '''
+        Method to generate password
+        '''
+        generate_pass = ''.join(random.choice(char) for _ in range(size))
+        return generate_pass
+
+    @classmethod
+    def check_user(cls, user_name, password):
+        '''
+        A method to check if account matches password
+        '''
+        current_user = ''
+        for user in User.user_list:
+            if (user.user_name == user_name and user.password == password):
+                current_user = user.user_name
+            return current_user
 
