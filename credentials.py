@@ -68,7 +68,7 @@ class Credentials:
         return False
 
     @classmethod
-    def delete_credentials(account_name):
+    def delete_credentials(account_name,password):
         '''
         A method to delete credentials
         '''

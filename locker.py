@@ -59,18 +59,24 @@ def check_credential(account_name):
     '''
     return Credentials.credential_exist(account_name)
 
+def find_by_account_name(account_name):
+    '''
+    A method to find credential by name
+    '''
+    return Credentials.find_by_account_name(account_name)
+
 def display_credentials(user_name):
     '''
     A method to display user's credential
     '''
     return Credentials.display_credentials(user_name)
 
-def delete_credentials(account_name):
+def delete_credentials(account_name, password):
     
     '''
     Method to delete credentials
     '''
-    Credentials.delete_credentials(account_name)
+    Credentials.delete_credentials(password)
 
 def copy_credentials(account_name):
     '''
@@ -146,15 +152,19 @@ def main():
                     elif short_code == 'dl':
                         print(' ')
                         print('Enter the account name of credential you want to delete')
-                        credential_name = input()
-                        if check_credential(credential_name):
-                            delete_credential = delete_credential(accout_name)
+                        account_name = input()
+                        print(' ')
+                        print('Enter password for the credential')
+                        password = input()
+                        if check_credential(account_name):
+                            delete_credential = find_by_account_name(account_name)
+                            delete_credential = delete_credentials(delete_credential,password)
                             print(' ')
-                            print(f'Credentials for {accout_name} deleted successfully.')
+                            print(f'Credentials for {account_name} deleted successfully.')
                         else:
                             print(' ')
                             print('No credentials found!')
-                            
+
                     elif short_code == 'cp':
                         print(' ')
                         chosen_account = input('Enter account to copy password from: ')
