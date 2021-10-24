@@ -1,6 +1,5 @@
 from user import User
 from credentials import Credentials
-import random
 
 def create_user(first_name, last_name, password):
     '''
@@ -47,4 +46,10 @@ def display_credentials(user_name):
     A method to display user's credential
     '''
     return Credentials.display_credentials(user_name)
-    
+
+def copy_credentials(account_name):
+    '''
+    A method to copy credentials
+    '''
+    return Credentials.copy_credentials(account_name)
+
