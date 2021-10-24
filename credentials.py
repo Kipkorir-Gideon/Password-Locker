@@ -57,6 +57,24 @@ class Credentials:
         return user_credentials_list
 
     @classmethod
+    def credential_exist(cls, account_name):
+        '''
+        A method to check if credential exist
+        '''
+        for credentials in cls.credentials_list:
+            if credentials.account_name == account_name:
+                return True
+
+        return False
+
+    @classmethod
+    def delete_credentials(account_name):
+        '''
+        A method to delete credentials
+        '''
+        Credentials.credentials_list.remove()
+
+    @classmethod
     def find_by_account_name(cls, account_name):
         '''
         A method to find credentials by the name of the account
