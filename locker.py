@@ -14,6 +14,12 @@ def save_user(user):
     '''
     User.save_user(user)
 
+def remove_user(user):
+    '''
+    A method to remove saved user
+    '''
+    User.remove_user()
+
 def checks_user(user_name, password):
     '''
     A method to check user if it exists
@@ -53,3 +59,20 @@ def copy_credentials(account_name):
     '''
     return Credentials.copy_credentials(account_name)
 
+
+def main():
+    print(' ')
+    print('Hi, Welcome to Password_Locker app.')
+    while True:
+        print('Use the following codes to use the app: \n ca - Create an Account \n li - Log In \n ex - Exit')
+        short_code = input('Enter your option: ').lower().strip()
+        if short_code == 'ca':
+            print('Create a new account.')
+            first_name = input('Enter your first name: ').strip()
+            last_name = input('Enter your last name: ').strip()
+            password = input('Enter your password: ').strip()
+            save_user(create_user(first_name, last_name, password))
+            print(' ')
+            print(f'Account created. \n First name: {first_name} \n Last name: {last_name} \n Password: {password}')
+
+        
