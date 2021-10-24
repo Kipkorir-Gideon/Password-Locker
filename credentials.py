@@ -55,3 +55,12 @@ class Credentials:
                 user_credentials_list.append(credential)
         return user_credentials_list
 
+    @classmethod
+    def find_by_account_name(cls, account_name):
+        '''
+        A method to find credentials by the name of the account
+        '''
+        for credential in cls.credentials_list:
+            if credential.account_name == account_name:
+                return credential
+
