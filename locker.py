@@ -18,7 +18,7 @@ def remove_user(user):
     '''
     A method to remove saved user
     '''
-    User.remove_user()
+    User.remove_user(user)
 
 def checks_user(user_name, password):
     '''
@@ -75,4 +75,15 @@ def main():
             print(' ')
             print(f'Account created. \n First name: {first_name} \n Last name: {last_name} \n Password: {password}')
 
-        
+        elif short_code == 'li':
+            print(' ')
+            print('Enter your account details to log in.')
+            user_name = input('Enter your first name: ').strip()
+            password = str(input('Enter your password: '))
+            user_exist = checks_user(user_name, password)
+            if user_exist == user_name:
+                print(' ')
+                print(f'Welcome {user_name}. What do you want to do?')
+                print(' ')
+                while True:
+                    
