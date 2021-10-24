@@ -14,3 +14,10 @@ def save_user(user):
     A method to save a user
     '''
     User.save_user(user)
+
+def checks_user(user_name, password):
+    '''
+    A method to check user if it exists
+    '''
+    checking_user = Credentials.check_user(user_name, password)
+    return checking_user
