@@ -86,4 +86,28 @@ def main():
                 print(f'Welcome {user_name}. What do you want to do?')
                 print(' ')
                 while True:
-                    
+                    print('Choose from the codes below: \n cc - Create credential \n dc - display credentials \n cp - Copy password \n ex - Exit')
+                    short_code = input('Enter code: ').lower().strip()
+                    if short_code == 'cc':
+                        print(' ')
+                        print('Enter credentials: ')
+                        accout_name = input('Enter account name: ').strip()
+                        while True:
+                            print(' ')
+                            print('Choose an option for password: \n ep - An existing password \n gp - Generate password \n ex - Exit')
+                            pass_option = input('Enter your option: ').lower().strip()
+                            if pass_option == 'ep':
+                                print(' ')
+                                password = input('Enter your password: ').strip()
+                                break
+                            elif pass_option == 'gp':
+                                password = generate_password()
+                                break
+                            elif pass_option == 'ex':
+                                break
+                            else:
+                                print('Wrong option. Try again.')
+                        save_credentials(create_credentials(user_name, accout_name, password))
+                        print(' ')
+                        print(f'Credentials created; \n Account name: {accout_name} \n Password: {password}')
+                        print(' ')
