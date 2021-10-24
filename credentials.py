@@ -35,14 +35,14 @@ class Credentials:
         return generate_pass
 
     @classmethod
-    def check_user(cls, user_name, password):
+    def check_user(cls, first_name, password):
         '''
         A method to check if account matches password
         '''
         current_user = ''
         for user in User.user_list:
-            if (user.user_name == user_name and user.password == password):
-                current_user = user.user_name
+            if (user.first_name == first_name and user.password == password):
+                current_user = user.first_name
             return current_user
 
     @classmethod

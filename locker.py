@@ -20,11 +20,11 @@ def remove_user(user):
     '''
     User.remove_user(user)
 
-def checks_user(user_name, password):
+def checks_user(first_name, password):
     '''
     A method to check user if it exists
     '''
-    checking_user = Credentials.check_user(user_name, password)
+    checking_user = Credentials.check_user(first_name, password)
     return checking_user
 
 def generate_password():
@@ -118,7 +118,7 @@ def main():
                             print('List of your credentials.')
                             print(' ')
                             for credentials in display_credentials(user_name):
-                                print(f'Account name: {credentials.accout_name} \n Password: {credentials.password}')
+                                print(f'Account name: {credentials.account_name} \n Password: {credentials.password}')
                             print(' ')
                         else:
                             print(' ')
