@@ -46,7 +46,7 @@ You can run tests using the following:
 
 ## Contact Information
 For any Suppoert or Feedback, fill free to contact the me through: 
-* Email at lawifirst@gmail.com 
+* Email at ngetichgideon21@gmail.com 
 * Phone on +254704843484
 
 
