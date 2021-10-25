@@ -68,13 +68,6 @@ class Credentials:
         return False
 
     @classmethod
-    def delete_credentials(account_name,password):
-        '''
-        A method to delete credentials
-        '''
-        Credentials.credentials_list.remove()
-
-    @classmethod
     def find_by_account_name(cls, account_name):
         '''
         A method to find credentials by the name of the account
@@ -82,6 +75,15 @@ class Credentials:
         for credential in cls.credentials_list:
             if credential.account_name == account_name:
                 return credential
+
+    
+    @classmethod
+    def delete_credentials(self):
+        '''
+        A method to delete credentials
+        '''
+        Credentials.credentials_list.remove(self)
+
 
     @classmethod
     def copy_credentials(cls, account_name):

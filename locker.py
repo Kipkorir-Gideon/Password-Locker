@@ -71,12 +71,12 @@ def display_credentials(user_name):
     '''
     return Credentials.display_credentials(user_name)
 
-def delete_credentials(account_name, password):
+def delete_credentials(account_name):
     
     '''
     Method to delete credentials
     '''
-    Credentials.delete_credentials(password)
+    Credentials.delete_credentials(account_name)
 
 def copy_credentials(account_name):
     '''
@@ -152,15 +152,16 @@ def main():
                     elif short_code == 'dl':
                         print(' ')
                         print('Enter the account name of credential you want to delete')
-                        account_name = input()
+                        credential_name = input()
                         print(' ')
                         print('Enter password for the credential')
                         password = input()
-                        if check_credential(account_name):
-                            delete_credential = find_by_account_name(account_name)
-                            delete_credential = delete_credentials(delete_credential,password)
+                        if find_by_account_name(credential_name):
+                            delete_credential = find_by_account_name(credential_name)
                             print(' ')
-                            print(f'Credentials for {account_name} deleted successfully.')
+                            delete_credential.delete_credentials()
+                            print(' ')
+                            print(f'Credentials for {credential_name} deleted successfully.')
                         else:
                             print(' ')
                             print('No credentials found!')
