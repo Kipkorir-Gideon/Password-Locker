@@ -48,3 +48,8 @@ You can run tests using the following:
 For any Suppoert or Feedback, fill free to contact the me through: 
 * Email at lawifirst@gmail.com 
 * Phone on +254704843484
+
+
+## License & copyright
+Licensed under the [MIT License](LICENSE).<br />
+Copyright (c) 2021 Kipkorir-Gideon
