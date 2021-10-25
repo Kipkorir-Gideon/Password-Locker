@@ -42,7 +42,7 @@ class TestCredentials(unittest.TestCase):
             Test to check if the display credentials method, display the correct credentials
             '''
             self.new_credential.save_credential()
-            twitter = Credentials('Yuri', 'twitter', 'yuri3607')
+            twitter = Credentials('gidalios', 'twitter', 'yuri3607')
             twitter.save_credential()
             self.assertEqual(len(Credentials.display_credentials(twitter.user_name)), 1)
             
